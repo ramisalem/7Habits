@@ -1,0 +1,3 @@
+rootProject.name = 'SevenHabits'
+
+include ':app'
