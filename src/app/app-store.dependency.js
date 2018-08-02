@@ -5,7 +5,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createEpicMiddleware, combineEpics } from 'redux-observable';
 
 import { configureEpicDependencies } from './app-epic.dependency';
-import { appReducers } from "../common/app-model/index.reducer";
+import { appReducers } from "../app-model/index.reducer";
+import { middleware } from "../ui/app-navigator/app-navigator.component";
 
 const createAppEpic = () => combineEpics(
 
@@ -24,9 +25,11 @@ export function configureStore() {
         createEpicMiddleware(createAppEpic(), {
             dependencies: configureEpicDependencies(),
         }),
+        middleware,
     ];
     const middlewareEnhancer = applyMiddleware(...middlewares);
     const enhancers = composeWithDevTools(middlewareEnhancer);
+    console.log(appReducers)
     const reducer = persistCombineReducers(config, appReducers);
 
     const store = createStore(reducer, enhancers);
