@@ -3,29 +3,34 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    Button,
 } from 'react-native';
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+export class HomeScreen extends Component {
+    static navigationOptions = ({ navigation }) => ({
+        title: '7Habits',
+        headerLeft: (
+            <Button
+                onPress={() => {
+                    navigation.openDrawer()}}
+                title="M"
+                color="#aaaaaa"
+            />
+        ),
+    });
 
-type Props = {};
-export class HomeScreen extends Component<Props> {
+    // static navigationOptions = {
+    //     headerTitle: '7Habits',
+
+    // };
+
     render() {
+        console.log(this.props);
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit App.js
-                </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
+                    Screen A
                 </Text>
             </View>
         );

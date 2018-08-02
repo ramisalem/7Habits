@@ -1,24 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createDrawerNavigator } from 'react-navigation';
+import { createDrawerNavigator, createStackNavigator } from 'react-navigation';
 import {
     reduxifyNavigator,
     createReactNavigationReduxMiddleware,
 } from 'react-navigation-redux-helpers';
 
-import LoginScreen from '../../home-screen/LoginScreen';
+import { HomeScreen } from "../../home-screen";
 
 const middleware = createReactNavigationReduxMiddleware(
     'root',
     state => state.navigation.nav
 );
 
+const HomeStack = createStackNavigator({
+    Home: { screen: HomeScreen },
+});
+
 const RootNavigator = createDrawerNavigator(
     {
-        Login: { screen: LoginScreen },
+        Home: { screen: HomeStack },
     },
     {
-        initialRouteName: 'Login',
+        initialRouteName: 'Home',
         contentOptions: {
             activeTintColor: '#e91e63',
         },
