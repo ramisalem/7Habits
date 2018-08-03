@@ -6,7 +6,7 @@ import { createEpicMiddleware, combineEpics } from 'redux-observable';
 
 import { configureEpicDependencies } from './app-epic.dependency';
 import { appReducers } from "../app-model/index.reducer";
-import { middleware } from "../ui/app-navigator/app-navigator.component";
+import { middleware } from "../ui/app-navigator/app-navigator-container.component";
 
 const createAppEpic = () => combineEpics(
 
