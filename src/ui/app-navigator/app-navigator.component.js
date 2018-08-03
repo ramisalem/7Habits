@@ -1,20 +1,13 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    ScrollView,
-    Image
-} from "react-native";
 import { connect } from 'react-redux';
-import { createDrawerNavigator, createStackNavigator, DrawerItems } from 'react-navigation';
+import { createDrawerNavigator, createStackNavigator } from 'react-navigation';
 import {
     reduxifyNavigator,
     createReactNavigationReduxMiddleware,
 } from 'react-navigation-redux-helpers';
-import { Container, Content, Icon, Header, Body } from 'native-base'
 
 import { HomeScreen } from "../../home-screen";
+import { DrawerContentComponent } from "./drawer-content.component";
 
 const middleware = createReactNavigationReduxMiddleware(
     'root',
@@ -25,19 +18,6 @@ const HomeStack = createStackNavigator({
     Home: { screen: HomeScreen },
 });
 
-const CustomDrawerContentComponent = (props) => {
-    return (
-        <View style={styles.drawerContainer}>
-            <View style={styles.drawerHeader}>
-                <View>
-                </View>
-            </View>
-            <View>
-                <DrawerItems {...props} />
-            </View>
-        </View>
-)};
-
 
 const RootNavigator = createDrawerNavigator(
     {
@@ -47,7 +27,7 @@ const RootNavigator = createDrawerNavigator(
         initialRouteName: 'Home',
         drawerPosition: 'left',
         drawerWidth: 200,
-        contentComponent: CustomDrawerContentComponent,
+        contentComponent: DrawerContentComponent,
         contentOptions: {
             activeTintColor: '#ffffff',
             inactiveTintColor: '#a4a4a4',
@@ -66,14 +46,3 @@ const AppNavigator = connect(mapStateToProps)(AppWithNavigationState);
 
 export { RootNavigator, AppNavigator, middleware };
 
-const styles = StyleSheet.create({
-    drawerContainer: {
-        flex: 1,
-        backgroundColor: '#323232',
-    },
-    drawerHeader: {
-        height: 64,
-        borderBottomColor: '#0F0F0F',
-        borderBottomWidth: 0.5,
-    },
-});
