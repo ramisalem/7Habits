@@ -26,18 +26,16 @@ const HomeStack = createStackNavigator({
 });
 
 const CustomDrawerContentComponent = (props) => {
-    console.log(props)
     return (
-    <Container>
-        <Header style={styles.drawerHeader}>
-            <Body>
-            </Body>
-        </Header>
-        <Content>
-            <DrawerItems {...props} />
-        </Content>
-    </Container>
-
+        <View style={styles.drawerContainer}>
+            <View style={styles.drawerHeader}>
+                <View>
+                </View>
+            </View>
+            <View>
+                <DrawerItems {...props} />
+            </View>
+        </View>
 )};
 
 
@@ -51,7 +49,8 @@ const RootNavigator = createDrawerNavigator(
         drawerWidth: 200,
         contentComponent: CustomDrawerContentComponent,
         contentOptions: {
-            activeTintColor: '#e91e63',
+            activeTintColor: '#ffffff',
+            inactiveTintColor: '#a4a4a4',
             activeBackgroundColor: 'transparent'
 },
     }
@@ -68,8 +67,13 @@ const AppNavigator = connect(mapStateToProps)(AppWithNavigationState);
 export { RootNavigator, AppNavigator, middleware };
 
 const styles = StyleSheet.create({
+    drawerContainer: {
+        flex: 1,
+        backgroundColor: '#323232',
+    },
     drawerHeader: {
         height: 64,
-        backgroundColor: 'white'
+        borderBottomColor: '#0F0F0F',
+        borderBottomWidth: 0.5,
     },
 });
