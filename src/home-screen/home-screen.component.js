@@ -28,11 +28,8 @@ export class HomeScreen extends Component {
 
     render() {
         return (
-
             <Container>
-
                 {/*<CustomHeader title="Home2" drawerOpen={() => this.props.navigation.openDrawer()} />*/}
-
                 <Content
                     contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 10 }}>
                     <Button
