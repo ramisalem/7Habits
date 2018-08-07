@@ -16,9 +16,9 @@ const menuIcon = (navigation) => (
     />
 );
 
-export class HomeScreen extends Component {
+export class Habit3 extends Component {
     static navigationOptions = ({ navigation }) => ({
-        title: "7Habits",
+        title: "Habits3",
         headerLeft: menuIcon(navigation),
         drawerIcon: menuIcon(navigation),
     });
