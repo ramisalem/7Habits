@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import {
     View,
-    Text,
     StyleSheet,
-    Image
 } from "react-native";
 
 import { Icon } from 'native-base'
+import {Color} from "../ui/shared/colors";
 
-const menuIcon = (navigation) => (
+export const menuIcon = (navigation) => (
     <Icon
         name="ios-menu"
         style={styles.icon}
@@ -19,8 +18,7 @@ const menuIcon = (navigation) => (
 export class HomeScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "7Habits",
-        headerLeft: menuIcon(navigation),
-        drawerIcon: menuIcon(navigation),
+        // headerLeft: menuIcon(navigation),
     });
 
     render() {
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
     },
     icon: {
         paddingLeft: 15,
-        color: 'white',
+        color: Color.Black,
         width: '80%',
     },
 });

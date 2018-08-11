@@ -1,13 +1,24 @@
 
 export const Color = {
-    red: '#D7453D',
-    blue: '#2196f3',
 
-    textBlack: '#202122',
+    Red: '#D7453D',
+    Blue: '#1B9CE2',
+    White: '#FFFFFF',
 
-    silver: '#EFF0F1',
-    group: '#FEFFFF',
-    shadow: '#F0F1F1',
+    Black: '#202122',
+    Silver: '#EFF0F1',
+    Group: '#FEFFFF',
+    Shadow: '#F0F1F1',
 
-    white: '#ffffff',
+    Tomato: '#D20915',
+    Tangerine: '#F1522C',
+    Banana: '#F4BD3B',
+    Basil: '#177F46',
+    Sage: '#3CB47B',
+    Peacock: '#1C9DE1',
+    Blueberry: '#4155B2',
+    Lavender: '#7B87C9',
+    Grape: '#8C2DA7',
+    Flamingo: '#E37C76',
+    Graphite: '#606162',
 };

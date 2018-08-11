@@ -19,8 +19,6 @@ const menuIcon = (navigation) => (
 export class Habit3 extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "Habits3",
-        headerLeft: menuIcon(navigation),
-        drawerIcon: menuIcon(navigation),
     });
 
     render() {

@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    Text,
     View,
     StyleSheet,
 } from "react-native";
@@ -10,7 +11,11 @@ import { Color } from "../shared/colors";
 export const DrawerContentComponent = (props) => (
     <View style={styles.drawerContainer}>
         <View style={styles.drawerHeader}>
-            <View />
+            <View>
+                <Text>
+                    7Habits
+                </Text>
+            </View>
         </View>
         <View>
             <DrawerItems {...props} />
@@ -21,11 +26,11 @@ export const DrawerContentComponent = (props) => (
 const styles = StyleSheet.create({
     drawerContainer: {
         flex: 1,
-        backgroundColor: Color.group,
+        backgroundColor: Color.Group,
     },
     drawerHeader: {
         height: 64,
-        borderBottomColor: Color.shadow,
+        borderBottomColor: Color.Shadow,
         borderBottomWidth: 1.5,
     },
 });
