@@ -1,5 +1,5 @@
-import { Color } from "../../shared/colors";
-import { MenuButton } from "../../component/menu-button/menu-button";
+import { Color } from "../../../shared/colors";
+import { MenuButton } from "../../../component/menu-button/menu-button";
 
 export const stackNavigatorConfig = {
     navigationOptions: ({ navigation }) => ({
@@ -8,10 +8,8 @@ export const stackNavigatorConfig = {
             borderBottomColor: Color.White,
             shadowColor: 'black',
             shadowOpacity: 0.2,
-            shadowRadius: 10,
-            shadowOffset: {
-                height: 1,
-            },
+            shadowRadius: 5,
+            shadowOffset: { height: 1 },
             elevation: 4,
         },
         headerTitleStyle: {
@@ -19,6 +17,5 @@ export const stackNavigatorConfig = {
         },
         headerTintColor: Color.Black,
         headerLeft: MenuButton(navigation),
-        drawerLabel: "1234"
     }),
 };

@@ -1,5 +1,5 @@
-import { Color } from "../../shared/colors";
-import { DrawerContentComponent } from "../../component/drawer/drawer-content.component";
+import { Color } from "../../../shared/colors";
+import { DrawerContentComponent } from "../../../component/drawer/drawer-content.component";
 
 export const drawerNavigatorConfig = {
     initialRouteName: 'FirstThingFirst',
