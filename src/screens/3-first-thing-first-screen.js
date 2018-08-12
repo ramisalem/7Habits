@@ -13,10 +13,10 @@ export class FirstThingFirstScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Button
-                    onPress={() => this.props.navigation.navigate('CreateTodoScreen')}
-                    title="Go to home tab"
-                />
+                {/*<Button*/}
+                    {/*onPress={() => this.props.navigation.navigate('CreateTodoScreen')}*/}
+                    {/*title="Go to home tab"*/}
+                {/*/>*/}
             </View>
         )
     }

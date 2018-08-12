@@ -3,7 +3,6 @@ import { DrawerContentComponent } from "../../../component/drawer/drawer-content
 import { routeNames } from "../route-config";
 import { drawerRouteName } from "../route-config";
 import {
-    MIcons,
     MCIcons
 } from "../../../component/drawer/drawer-icon";
 
@@ -36,6 +35,6 @@ export const firstThingFirstNavOptions = drawerOptions('要事第一', MCIcons.p
 
 export const thinkWinWinNavOptions = drawerOptions('双赢思维', MCIcons.accountMultiple);
 export const seekToUnderstandNavOptions = drawerOptions('知彼解己', MCIcons.earHearing);
-export const synergizeNavOptions = drawerOptions('统合综效', MCIcons.lightbulbOnOutline);
+export const synergizeNavOptions = drawerOptions('统合综效', MCIcons.trendingUp);
 
 export const sharpenTheSawNavOptions = drawerOptions('不断更新', MCIcons.cached);

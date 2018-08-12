@@ -1,5 +1,5 @@
 import { Color } from "../../../shared/colors";
-import { MenuButton } from "../../../component/menu-button/menu-button";
+import { MenuButton, TintButton } from "../../../component/menu-button/menu-button";
 
 export const stackNavigatorOptions = {
     navigationOptions: ({ navigation }) => ({
@@ -17,5 +17,6 @@ export const stackNavigatorOptions = {
         },
         headerTintColor: Color.Black,
         headerLeft: MenuButton(navigation),
+        headerRight: TintButton(navigation),
     }),
 };

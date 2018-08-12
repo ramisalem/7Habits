@@ -13,7 +13,7 @@ export const DrawerContentComponent = (props) => (
         <View style={styles.drawerHeader}>
             <View style={styles.logoHeader}>
                 <Text style={styles.logoText}>
-                    7Habits
+                    7 Habits
                 </Text>
             </View>
         </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     drawerHeader: {
         height: 64,
         borderBottomColor: Color.Shadow,
-        borderBottomWidth: 0.5,
+        borderBottomWidth: 1,
     },
     logoHeader: {
         flex: 1,

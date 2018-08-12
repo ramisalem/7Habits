@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import {
     View,
-    Text,
     StyleSheet,
-    Image
 } from "react-native";
-
-import { Icon } from 'native-base'
-
 
 export class CreateTodoScreen extends Component {
     static navigationOptions = ({ navigation }) => ({

@@ -3,21 +3,37 @@ import {
     StyleSheet,
 } from "react-native";
 
-import { Icon } from 'native-base'
 import { Color } from "../../shared/colors";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+const iconSize = 20;
 
 export const MenuButton = (navigation) => (
-    <Icon
-        name="ios-menu"
-        style={styles.icon}
+    <MaterialCommunityIcons
+        name='menu'
+        size={iconSize}
+        style={styles.iconLeft}
+        onPress={() => navigation.openDrawer()}
+    />
+);
+
+export const TintButton = (navigation) => (
+    <MaterialCommunityIcons
+        name='lightbulb-on-outline'
+        size={iconSize}
+        color={Color.Red}
+        style={styles.iconRight}
         onPress={() => navigation.openDrawer()}
     />
 );
 
 const styles = StyleSheet.create({
-    icon: {
+    iconLeft: {
         paddingLeft: 15,
-        color: Color.Black,
-        width: '80%',
+        color: Color.Graphite,
+    },
+    iconRight: {
+        paddingRight: 15,
+        color: Color.Banana,
     },
 });
