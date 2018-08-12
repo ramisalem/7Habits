@@ -13,22 +13,23 @@ const MIconCreater = (iconName) => ({tintColor}) =>
     <MaterialIcons name={iconName} size={iconSize} color={tintColor} />;
 
 export const MCIcons = {
-    walk: MCIconCreater('walk'),
     run: MCIconCreater('run'),
-    gps: MCIconCreater('crosshairs-gps'),
+    walk: MCIconCreater('walk'),
+    group: MCIconCreater('group'),
+    cached: MCIconCreater('cached'),
     update: MCIconCreater('update'),
     target: MCIconCreater('target'),
-    playlistCcheck: MCIconCreater('playlist-check'),
-    checkboxMarkedOutline: MCIconCreater('checkbox-marked-outline'),
-    checkboxMarkedCircleOutline: MCIconCreater('checkbox-marked-circle-outline'),
-    cardGiftcard: MCIconCreater('card-giftcard'),
-    creditCardPlus: MCIconCreater('credit-card-plus'),
     earHearing: MCIconCreater('ear-hearing'),
-    accountMultiple: MCIconCreater('account-multiple'),
-    group: MCIconCreater('group'),
-    lightbulbOnOutline: MCIconCreater('lightbulb-on-outline'),
+    cardGiftcard: MCIconCreater('card-giftcard'),
     humanHandsup: MCIconCreater('human-handsup'),
     humanGreeting: MCIconCreater('human-greeting'),
+    crosshairsGps: MCIconCreater('crosshairs-gps'),
+    playlistCcheck: MCIconCreater('playlist-check'),
+    creditCardPlus: MCIconCreater('credit-card-plus'),
+    accountMultiple: MCIconCreater('account-multiple'),
+    lightbulbOnOutline: MCIconCreater('lightbulb-on-outline'),
+    checkboxMarkedOutline: MCIconCreater('checkbox-marked-outline'),
+    checkboxMarkedCircleOutline: MCIconCreater('checkbox-marked-circle-outline'),
 };
 
 export const MIcons = {

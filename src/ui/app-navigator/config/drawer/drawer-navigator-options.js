@@ -30,12 +30,12 @@ const drawerOptions = (title, icon) => ({
     drawerIcon: icon,
 });
 
-export const beProactiveNavOptions = drawerOptions('1', MCIcons.update);
-export const beginWithEndNavOptions = drawerOptions('2', MCIcons.target);
-export const firstThingFirstNavOptions = drawerOptions('3', MCIcons.gps);
+export const beProactiveNavOptions = drawerOptions('积极主动', MCIcons.walk);
+export const beginWithEndNavOptions = drawerOptions('以终为始', MCIcons.target);
+export const firstThingFirstNavOptions = drawerOptions('要事第一', MCIcons.playlistCcheck);
 
-export const thinkWinWinNavOptions = drawerOptions('1', MCIcons.update);
-export const seekToUnderstandNavOptions = drawerOptions('2', MCIcons.target);
-export const synergizeNavOptions = drawerOptions('3', MCIcons.gps);
+export const thinkWinWinNavOptions = drawerOptions('双赢思维', MCIcons.accountMultiple);
+export const seekToUnderstandNavOptions = drawerOptions('知彼解己', MCIcons.earHearing);
+export const synergizeNavOptions = drawerOptions('统合综效', MCIcons.lightbulbOnOutline);
 
-export const sharpenTheSawNavOptions = drawerOptions('1', MCIcons.update);
+export const sharpenTheSawNavOptions = drawerOptions('不断更新', MCIcons.cached);
