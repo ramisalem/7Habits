@@ -2,7 +2,10 @@ import { Color } from "../../../shared/colors";
 import { DrawerContentComponent } from "../../../component/drawer/drawer-content.component";
 import { routeNames } from "../route-config";
 import { drawerRouteName } from "../route-config";
-import { drawerIcon } from "../../../component/drawer/drawer-icon";
+import {
+    MIcons,
+    MCIcons
+} from "../../../component/drawer/drawer-icon";
 
 export const drawerNavigatorOptions = {
     initialRouteName: drawerRouteName(routeNames.firstThingFirst),
@@ -22,11 +25,17 @@ export const drawerNavigatorOptions = {
     },
 };
 
-const drawerOptions = (title, iconName) => ({
+const drawerOptions = (title, icon) => ({
     drawerLabel: title,
-    drawerIcon: ({ tintColor }) => drawerIcon(iconName, tintColor),
+    drawerIcon: icon,
 });
 
-export const beProactiveNavOptions = drawerOptions('1', 'home');
-export const beginWithEndNavOptions = drawerOptions('2', 'home');
-export const firstThingFirstNavOptions = drawerOptions('3', 'home');
+export const beProactiveNavOptions = drawerOptions('1', MCIcons.update);
+export const beginWithEndNavOptions = drawerOptions('2', MCIcons.target);
+export const firstThingFirstNavOptions = drawerOptions('3', MCIcons.gps);
+
+export const thinkWinWinNavOptions = drawerOptions('1', MCIcons.update);
+export const seekToUnderstandNavOptions = drawerOptions('2', MCIcons.target);
+export const synergizeNavOptions = drawerOptions('3', MCIcons.gps);
+
+export const sharpenTheSawNavOptions = drawerOptions('1', MCIcons.update);

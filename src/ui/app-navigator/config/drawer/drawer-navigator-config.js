@@ -2,7 +2,11 @@ import { createDrawerNavigator } from 'react-navigation';
 import {
     beProactiveStackNavigator,
     beginWithEndStackNavigator,
-    firstThingFirstStackNavigator
+    firstThingFirstStackNavigator,
+    thinkWinWinStackNavigator,
+    seekToUnderstandStackNavigator,
+    synergizeStackNavigator,
+    sharpenTheSawStackNavigator,
 } from "../../config/stack/stack-navigator-config";
 import { drawerNavigatorOptions } from "./drawer-navigator-options";
 import { routeNames } from "../route-config";
@@ -11,6 +15,10 @@ import {
     beProactiveNavOptions,
     beginWithEndNavOptions,
     firstThingFirstNavOptions,
+    thinkWinWinNavOptions,
+    seekToUnderstandNavOptions,
+    synergizeNavOptions,
+    sharpenTheSawNavOptions,
 } from "./drawer-navigator-options";
 
 const drawerRoutes = {
@@ -25,6 +33,22 @@ const drawerRoutes = {
     [drawerRouteName(routeNames.firstThingFirst)]: {
         screen: firstThingFirstStackNavigator,
         navigationOptions: firstThingFirstNavOptions,
+    },
+    [drawerRouteName(routeNames.thinkWinWin)]: {
+        screen: thinkWinWinStackNavigator,
+        navigationOptions: thinkWinWinNavOptions,
+    },
+    [drawerRouteName(routeNames.seekToUnderstand)]: {
+        screen: seekToUnderstandStackNavigator,
+        navigationOptions: seekToUnderstandNavOptions,
+    },
+    [drawerRouteName(routeNames.synergize)]: {
+        screen: synergizeStackNavigator,
+        navigationOptions: synergizeNavOptions,
+    },
+    [drawerRouteName(routeNames.sharpenTheSaw)]: {
+        screen: sharpenTheSawStackNavigator,
+        navigationOptions: sharpenTheSawNavOptions,
     },
 };
 

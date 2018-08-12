@@ -2,6 +2,10 @@ export const routeNames = {
     beProactive: 'beProactive',
     beginWithEnd: 'beginWithEnd',
     firstThingFirst: 'firstThingFirst',
+    thinkWinWin: 'thinkWinWin',
+    seekToUnderstand: 'seekToUnderstand',
+    synergize: 'synergize',
+    sharpenTheSaw: 'sharpenTheSaw',
 
     createTodo: 'createTodo',
 };
