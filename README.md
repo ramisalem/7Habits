@@ -1,2 +1,2 @@
 # 7Habits
-An todo and plan APP inspired by the book of The 7 Habits of Highly Effective People.
+A React Native todo and plan APP. Inspired by the book of The 7 Habits of Highly Effective People.
