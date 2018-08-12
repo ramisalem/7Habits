@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {
     View,
     StyleSheet,
+    Button
 } from "react-native";
 
 import { Icon } from 'native-base'
@@ -19,12 +20,14 @@ export class HomeScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "7Habits",
         // headerLeft: menuIcon(navigation),
+        drawerLabel: "123",
+        drawerIcon: menuIcon(navigation)
     });
 
     render() {
         return (
             <View style={styles.container}>
-
+                <Button onPress={() => this.props.navigation.openDrawer()} title="Open drawer" />
             </View>
         )
     }

@@ -19,5 +19,6 @@ export const stackNavigatorConfig = {
         },
         headerTintColor: Color.Black,
         headerLeft: MenuButton(navigation),
+        drawerLabel: "1234"
     }),
 };

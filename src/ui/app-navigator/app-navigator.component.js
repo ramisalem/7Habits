@@ -19,11 +19,13 @@ const Habit3Stack = createStackNavigator({
 }, {
     ...stackNavigatorConfig,
     initialRouteName: 'Habit3',
+    drawerLabel: "123"
+
 });
 
 export const RootNavigator = createDrawerNavigator(
     {
-        Home: { screen: HomeStack },
+        Home: { screen: HomeScreen },
         Habits3D: { screen: Habit3Stack },
     },
     drawerNavigatorConfig,

@@ -1,5 +1,5 @@
 import { Color } from "../../shared/colors";
-import { DrawerContentComponent } from "../drawer-content.component";
+import { DrawerContentComponent } from "../../component/drawer/drawer-content.component";
 
 export const drawerNavigatorConfig = {
     initialRouteName: 'Home',
@@ -12,6 +12,10 @@ export const drawerNavigatorConfig = {
         activeBackgroundColor: Color.Silver,
         labelStyle: {
             fontWeight: '400',
-        }
+        },
+        itemsContainerStyle: {
+            paddingVertical: 6,
+        },
     },
+    drawerLabel: '123'
 };
