@@ -4,30 +4,61 @@ import { createDrawerNavigator, createStackNavigator } from 'react-navigation';
 import { stackNavigatorConfig } from "./config/stack-navigator-config";
 import { drawerNavigatorConfig } from "./config/drawer-navigator-config";
 
-import { HomeScreen } from "../../home-screen";
-import { Habit3 } from "../../screens/habit3.component";
+import {
+    BeProactiveScreen,
+    BeginWithEndScreen,
+    FirstThingFirstScreen,
+    CreateTodoScreen,
+} from "../../screens";
 
-const HomeStack = createStackNavigator({
-    Home: { screen: HomeScreen },
-}, {
-    ...stackNavigatorConfig,
-    initialRouteName: 'Home',
-});
-
-const Habit3Stack = createStackNavigator({
-    Habit3: { screen: Habit3 },
-}, {
-    ...stackNavigatorConfig,
-    initialRouteName: 'Habit3',
-    drawerLabel: "123"
-
-});
-
-export const RootNavigator = createDrawerNavigator(
-    {
-        Home: { screen: HomeScreen },
-        Habits3D: { screen: Habit3Stack },
+const BeProactiveStackRoutes = {
+    BeProactiveScreen: {
+        screen: BeProactiveScreen,
     },
-    drawerNavigatorConfig,
-);
+};
 
+const BeginWithEndStackRoutes = {
+    BeginWithEndScreen: {
+        screen: BeginWithEndScreen,
+    },
+};
+
+const FirstThingFirstStackRoutes = {
+    FirstThingFirstScreen: {
+        screen: FirstThingFirstScreen,
+    },
+    CreateTodoScreen: {
+        screen: CreateTodoScreen,
+    }
+};
+
+const DrawerRoutes = {
+    BeProactive: {
+        name: 'BeProactiveName',
+        screen: createStackNavigator(BeProactiveStackRoutes, { initialRouteName: 'BeProactiveScreen', ...stackNavigatorConfig })
+    },
+    BeginWithEnd: {
+        name: 'BeginWithEndName',
+        screen: createStackNavigator(BeginWithEndStackRoutes, { initialRouteName: 'BeginWithEndScreen', ...stackNavigatorConfig })
+    },
+    FirstThingFirst: {
+        name: 'FirstThingFirstName',
+        screen: createStackNavigator(FirstThingFirstStackRoutes, { initialRouteName: 'FirstThingFirstScreen', ...stackNavigatorConfig })
+    },
+};
+
+export const RootNavigator =
+    createStackNavigator({
+            Drawer: {
+                name: 'Drawer',
+                screen: createDrawerNavigator(
+                    DrawerRoutes,
+                    drawerNavigatorConfig
+                ),
+            },
+            // ...Stack
+        },
+        {
+            headerMode: 'none'
+        }
+    );

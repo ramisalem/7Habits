@@ -2,7 +2,7 @@ import { Color } from "../../shared/colors";
 import { DrawerContentComponent } from "../../component/drawer/drawer-content.component";
 
 export const drawerNavigatorConfig = {
-    initialRouteName: 'Home',
+    initialRouteName: 'FirstThingFirst',
     drawerPosition: 'left',
     drawerWidth: 200,
     contentComponent: DrawerContentComponent,

@@ -1,24 +1,12 @@
 import React, { Component } from "react";
 import {
     View,
-    Text,
     StyleSheet,
-    Image
 } from "react-native";
 
-import { Icon } from 'native-base'
-
-const menuIcon = (navigation) => (
-    <Icon
-        name="ios-menu"
-        style={styles.icon}
-        onPress={() => navigation.openDrawer()}
-    />
-);
-
-export class Habit3 extends Component {
+export class BeProactiveScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
-        title: "Habits3",
+        title: "Be Proactive",
     });
 
     render() {
