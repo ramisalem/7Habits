@@ -1,7 +1,7 @@
 import { Color } from "../../../shared/colors";
 import { MenuButton } from "../../../component/menu-button/menu-button";
 
-export const stackNavigatorConfig = {
+export const stackNavigatorOptions = {
     navigationOptions: ({ navigation }) => ({
         headerStyle: {
             backgroundColor: Color.White,

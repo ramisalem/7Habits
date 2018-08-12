@@ -1,21 +1,34 @@
-import { Color } from "../../../shared/colors";
-import { DrawerContentComponent } from "../../../component/drawer/drawer-content.component";
+import { createDrawerNavigator } from 'react-navigation';
+import {
+    beProactiveStackNavigator,
+    beginWithEndStackNavigator,
+    firstThingFirstStackNavigator
+} from "../../config/stack/stack-navigator-config";
+import { drawerNavigatorOptions } from "./drawer-navigator-options";
+import { routeNames } from "../route-config";
+import { drawerRouteName } from "../route-config";
+import {
+    beProactiveNavOptions,
+    beginWithEndNavOptions,
+    firstThingFirstNavOptions,
+} from "./drawer-navigator-options";
 
-export const drawerNavigatorConfig = {
-    initialRouteName: 'FirstThingFirst',
-    drawerPosition: 'left',
-    drawerWidth: 200,
-    contentComponent: DrawerContentComponent,
-    contentOptions: {
-        activeTintColor: Color.Black,
-        inactiveTintColor: Color.Black,
-        activeBackgroundColor: Color.Silver,
-        labelStyle: {
-            fontWeight: '400',
-        },
-        itemsContainerStyle: {
-            paddingVertical: 6,
-        },
+const drawerRoutes = {
+    [drawerRouteName(routeNames.beProactive)]: {
+        screen: beProactiveStackNavigator,
+        navigationOptions: beProactiveNavOptions,
     },
-    drawerLabel: '123'
+    [drawerRouteName(routeNames.beginWithEnd)]: {
+        screen: beginWithEndStackNavigator,
+        navigationOptions: beginWithEndNavOptions,
+    },
+    [drawerRouteName(routeNames.firstThingFirst)]: {
+        screen: firstThingFirstStackNavigator,
+        navigationOptions: firstThingFirstNavOptions,
+    },
 };
+
+export const drawerNavigator = createDrawerNavigator(
+    drawerRoutes,
+    drawerNavigatorOptions
+);

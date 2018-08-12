@@ -1,15 +1,15 @@
-import { createDrawerNavigator, createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import {
     BeProactiveScreen,
     BeginWithEndScreen,
     FirstThingFirstScreen,
     CreateTodoScreen,
-} from "../../../../screens/index";
+} from "../../../../screens";
 import {
     routeNames,
     screenRouteName,
 } from "../route-config";
-import { stackNavigatorConfig } from "./stack-navigation-options";
+import { stackNavigatorOptions } from "./stack-navigation-options";
 
 const screenRoute = (routeName, screen) => ({
     [screenRouteName(routeName)]: { screen },
@@ -17,7 +17,7 @@ const screenRoute = (routeName, screen) => ({
 const stackNavigator = (route, initialRouteName) =>
     createStackNavigator(route, {
             initialRouteName,
-            ...stackNavigatorConfig
+            ...stackNavigatorOptions
         },
     );
 

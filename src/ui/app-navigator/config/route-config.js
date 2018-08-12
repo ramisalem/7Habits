@@ -13,5 +13,5 @@ const routePostfix = {
 
 export const screenRouteName =
     (routeName) => `${routeName}${routePostfix.screen}`;
-const drawerRouteName =
+export const drawerRouteName =
     (routeName) => `${routeName}${routePostfix.drawer}`;
