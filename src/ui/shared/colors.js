@@ -1,24 +1,24 @@
 
-export const Color = {
+export const COLOR = {
 
-    Red: '#D7453D',
-    Blue: '#1B9CE2',
-    White: '#FFFFFF',
+    RED: '#D7453D',
+    BLUE: '#1B9CE2',
+    WHITE: '#FFFFFF',
 
-    Black: '#202122',
-    Silver: '#EFF0F1',
-    Group: '#FEFFFF',
-    Shadow: '#F0F1F1',
+    BLACK: '#202122',
+    SILVER: '#EFF0F1',
+    GROUP: '#FEFFFF',
+    SHADOW: '#F0F1F1',
 
-    Tomato: '#D20915',
-    Tangerine: '#F1522C',
-    Banana: '#F4BD3B',
-    Basil: '#177F46',
-    Sage: '#3CB47B',
-    Peacock: '#1C9DE1',
-    Blueberry: '#4155B2',
-    Lavender: '#7B87C9',
-    Grape: '#8C2DA7',
-    Flamingo: '#E37C76',
-    Graphite: '#606162',
+    TOMATO: '#D20915',
+    TANGERINE: '#F1522C',
+    BANANA: '#F4BD3B',
+    BASIL: '#177F46',
+    SAGE: '#3CB47B',
+    PEACOCK: '#1C9DE1',
+    BLUEBERRY: '#4155B2',
+    LAVENDER: '#7B87C9',
+    GRAPE: '#8C2DA7',
+    FLAMINGO: '#E37C76',
+    GRAPHITE: '#606162',
 };

@@ -1,20 +1,19 @@
-import { Color } from "../../../shared/colors";
+import { COLOR } from "../../../shared/colors";
 import { DrawerContentComponent } from "../../../component/drawer/drawer-content.component";
 import { routeNames } from "../route-config";
 import { drawerRouteName } from "../route-config";
-import {
-    MCIcons
-} from "../../../component/drawer/drawer-icon";
+import { MCIcons } from "../../../component/drawer/drawer-icon";
+import { screen } from "../../../shared/screen";
 
 export const drawerNavigatorOptions = {
     initialRouteName: drawerRouteName(routeNames.firstThingFirst),
     drawerPosition: 'left',
-    drawerWidth: 200,
+    drawerWidth: screen.goldenWidth,
     contentComponent: DrawerContentComponent,
     contentOptions: {
-        activeTintColor: Color.Tomato,
-        inactiveTintColor: Color.Black,
-        activeBackgroundColor: Color.Silver,
+        activeTintColor: COLOR.TOMATO,
+        inactiveTintColor: COLOR.BLACK,
+        activeBackgroundColor: COLOR.SILVER,
         labelStyle: {
             fontWeight: '400',
         },

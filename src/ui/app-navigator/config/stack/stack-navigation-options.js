@@ -1,11 +1,11 @@
-import { Color } from "../../../shared/colors";
+import { COLOR } from "../../../shared/colors";
 import { MenuButton, TintButton } from "../../../component/menu-button/menu-button";
 
 export const stackNavigatorOptions = {
     navigationOptions: ({ navigation }) => ({
         headerStyle: {
-            backgroundColor: Color.White,
-            borderBottomColor: Color.White,
+            backgroundColor: COLOR.WHITE,
+            borderBottomColor: COLOR.WHITE,
             shadowColor: 'black',
             shadowOpacity: 0.2,
             shadowRadius: 5,
@@ -15,7 +15,7 @@ export const stackNavigatorOptions = {
         headerTitleStyle: {
             fontWeight: '500',
         },
-        headerTintColor: Color.Black,
+        headerTintColor: COLOR.BLACK,
         headerLeft: MenuButton(navigation),
         headerRight: TintButton(navigation),
     }),

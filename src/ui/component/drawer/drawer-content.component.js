@@ -6,7 +6,7 @@ import {
 } from "react-native";
 import { DrawerItems } from 'react-navigation';
 
-import { Color } from "../../shared/colors";
+import { COLOR } from "../../shared/colors";
 
 export const DrawerContentComponent = (props) => (
     <View style={styles.drawerContainer}>
@@ -26,11 +26,11 @@ export const DrawerContentComponent = (props) => (
 const styles = StyleSheet.create({
     drawerContainer: {
         flex: 1,
-        backgroundColor: Color.Group,
+        backgroundColor: COLOR.GROUP,
     },
     drawerHeader: {
         height: 64,
-        borderBottomColor: Color.Shadow,
+        borderBottomColor: COLOR.SHADOW,
         borderBottomWidth: 1,
     },
     logoHeader: {
