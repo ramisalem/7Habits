@@ -1,36 +1,60 @@
 import React, { Component } from "react";
 import {
-    Button,
     View,
     StyleSheet,
 } from "react-native";
 
 export class SharpenTheSawScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
-        title: "First Thing First",
+        title: "Sharpen The Saw",
     });
 
     render() {
         return (
             <View style={styles.container}>
-                <Button
-                    onPress={() => this.props.navigation.navigate('CreateTodoScreen')}
-                    title="Go to home tab"
-                />
+                <View style={styles.blueBox}/>
+                <View style={styles.blueBox}>
+                    <View style={styles.redBox}/>
+                </View>
             </View>
-        )
+        );
     }
 }
-
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F7F7F7',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: 10,
+        backgroundColor: '#ecf0f1',
     },
-    icon: {
-        paddingLeft: 15,
-        color: 'white',
-        width: '80%',
+    paragraph: {
+        margin: 24,
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#34495e',
     },
+    blueBox: {
+        width: 100,
+        height: 100,
+        backgroundColor: 'steelblue',
+        borderRadius: 20,
+        margin: 5,
+        padding: 5
+    },
+    redBox: {
+        width: 50,
+        height: 50,
+        backgroundColor: 'red',
+        borderRadius: 20,
+    },
+    button: {
+        backgroundColor: '#4ba37b',
+        width: 100,
+        borderRadius: 50,
+        alignItems: 'center',
+        marginTop: 100
+    }
 });
