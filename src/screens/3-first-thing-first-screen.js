@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import {
     View,
     StyleSheet,
+    Button
 } from "react-native";
+import { TodoListCard } from "../ui/todo-list-card/todo-list-card.component";
+
+import { COLOR } from "../ui/shared/colors";
 
 export class FirstThingFirstScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
@@ -12,9 +16,15 @@ export class FirstThingFirstScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.blueBox}/>
-                <View style={styles.blueBox}>
-                    <View style={styles.redBox}/>
+                <View style={styles.horizonPart}>
+                    <View style={styles.verticalPart}>
+                        <TodoListCard navigation={this.props.navigation}/>
+                    </View>
+                    <View style={styles.verticalPart}/>
+                </View>
+                <View style={styles.horizonPart}>
+                    <View style={styles.verticalPart}/>
+                    <View style={styles.verticalPart}/>
                 </View>
             </View>
         );
@@ -26,35 +36,18 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: 10,
-        backgroundColor: '#ecf0f1',
-    },
-    paragraph: {
-        margin: 24,
-        fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#34495e',
-    },
-    blueBox: {
-        width: 100,
-        height: 100,
-        backgroundColor: 'steelblue',
-        borderRadius: 20,
+        backgroundColor: COLOR.GROUP,
         margin: 5,
-        padding: 5
+        paddingVertical: 2,
     },
-    redBox: {
-        width: 50,
-        height: 50,
-        backgroundColor: 'red',
-        borderRadius: 20,
+    horizonPart: {
+        flex:1 ,
+        flexDirection: 'row',
+        width: '100%',
     },
-    button: {
-        backgroundColor: '#4ba37b',
-        width: 100,
-        borderRadius: 50,
-        alignItems: 'center',
-        marginTop: 100
-    }
+    verticalPart: {
+        flex:1,
+        backgroundColor: COLOR.WHITE,
+        margin: 5,
+    },
 });

@@ -18,10 +18,11 @@ import { stackNavigatorOptions } from "./stack-navigation-options";
 const screenRoute = (routeName, screen) => ({
     [screenRouteName(routeName)]: { screen },
 });
-const stackNavigator = (route, initialRouteName) =>
+const stackNavigator = (route, initialRouteName, additionalProps) =>
     createStackNavigator(route, {
             initialRouteName,
-            ...stackNavigatorOptions
+            ...additionalProps,
+            ...stackNavigatorOptions,
         },
     );
 
@@ -44,25 +45,18 @@ const sharpenTheSawStackRoutes =
     screenRoute(routeNames.sharpenTheSaw, SharpenTheSawScreen);
 
 export const beProactiveStackNavigator = stackNavigator(
-    beProactiveStackRoutes, screenRouteName(routeNames.beProactive)
-);
+    beProactiveStackRoutes, screenRouteName(routeNames.beProactive));
 export const beginWithEndStackNavigator = stackNavigator(
-    beginWithEndStackRoutes, screenRouteName(routeNames.beginWithEnd)
-);
+    beginWithEndStackRoutes, screenRouteName(routeNames.beginWithEnd));
 export const firstThingFirstStackNavigator = stackNavigator(
-    firstThingFirstStackRoutes, screenRouteName(routeNames.firstThingFirst)
-);
+    firstThingFirstStackRoutes, screenRouteName(routeNames.firstThingFirst), { mode: 'modal' });
 
 export const thinkWinWinStackNavigator = stackNavigator(
-    thinkWinWinStackRoutes, screenRouteName(routeNames.thinkWinWin)
-);
+    thinkWinWinStackRoutes, screenRouteName(routeNames.thinkWinWin));
 export const seekToUnderstandStackNavigator = stackNavigator(
-    seekToUnderstandStackRoutes, screenRouteName(routeNames.seekToUnderstand)
-);
+    seekToUnderstandStackRoutes, screenRouteName(routeNames.seekToUnderstand));
 export const synergizeStackNavigator = stackNavigator(
-    synergizeStackRoutes, screenRouteName(routeNames.synergize)
-);
+    synergizeStackRoutes, screenRouteName(routeNames.synergize));
 
 export const sharpenTheSawStackNavigator = stackNavigator(
-    sharpenTheSawStackRoutes, screenRouteName(routeNames.sharpenTheSaw)
-);
+    sharpenTheSawStackRoutes, screenRouteName(routeNames.sharpenTheSaw));

@@ -7,8 +7,9 @@ export const COLOR = {
 
     BLACK: '#202122',
     SILVER: '#EFF0F1',
-    GROUP: '#FEFFFF',
+    GROUP: '#EEEDEE',
     SHADOW: '#F0F1F1',
+    TEXT: '#454646',
 
     TOMATO: '#D20915',
     TANGERINE: '#F1522C',

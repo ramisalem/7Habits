@@ -17,6 +17,7 @@ export const MCIcons = {
     walk: MCIconCreater('walk'),
     menu: MCIconCreater('menu'),
     group: MCIconCreater('group'),
+    close: MCIconCreater('close'),
     cached: MCIconCreater('cached'),
     update: MCIconCreater('update'),
     target: MCIconCreater('target'),

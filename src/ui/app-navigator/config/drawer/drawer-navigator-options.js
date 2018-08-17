@@ -3,12 +3,12 @@ import { DrawerContentComponent } from "../../../component/drawer/drawer-content
 import { routeNames } from "../route-config";
 import { drawerRouteName } from "../route-config";
 import { MCIcons } from "../../../component/drawer/drawer-icon";
-import { screen } from "../../../shared/screen";
+import { SCREEN } from "../../../shared/size";
 
 export const drawerNavigatorOptions = {
     initialRouteName: drawerRouteName(routeNames.firstThingFirst),
     drawerPosition: 'left',
-    drawerWidth: screen.goldenWidth,
+    drawerWidth: SCREEN.GOLDEN_WIDTH,
     contentComponent: DrawerContentComponent,
     contentOptions: {
         activeTintColor: COLOR.TOMATO,

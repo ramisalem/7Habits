@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         color: '#34495e',
     },
     blueBox: {
-        width: 100,
+        width: 320,
         height: 100,
         backgroundColor: 'steelblue',
         borderRadius: 20,

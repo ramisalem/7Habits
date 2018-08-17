@@ -1,5 +1,6 @@
 import { COLOR } from "../../../shared/colors";
 import { MenuButton, TintButton } from "../../../component/menu-button/menu-button";
+import { scaledSize } from "../../../shared/size";
 
 export const stackNavigatorOptions = {
     navigationOptions: ({ navigation }) => ({
@@ -14,6 +15,7 @@ export const stackNavigatorOptions = {
         },
         headerTitleStyle: {
             fontWeight: '500',
+            fontSize: scaledSize(20),
         },
         headerTintColor: COLOR.BLACK,
         headerLeft: MenuButton(navigation),

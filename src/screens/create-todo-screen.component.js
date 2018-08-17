@@ -1,19 +1,29 @@
 import React, { Component } from "react";
 import {
+    Text,
+    TextInput,
     View,
     StyleSheet,
 } from "react-native";
+import { CloseButton } from "../ui/component/menu-button/menu-button";
 
 export class CreateTodoScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "Create Todo",
+        headerLeft: CloseButton(navigation),
+        headerRight: <Text>Save</Text>
     });
 
     render() {
         return (
-            <View style={styles.container}>
-
-            </View>
+            <TextInput
+                style={styles.container}
+                multiline
+            >
+                {/*<TextInput>*/}
+                    {/**/}
+                {/*</TextInput>*/}
+            </TextInput>
         )
     }
 }
