@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     text: {
-        color: COLOR.TEXT,
-        fontSize: scaledSize(18),
+        color: COLOR.GRAPHITE,
+        fontSize: scaledSize(14),
         fontFamily: 'PingFangTC-Regular',
     }
 });

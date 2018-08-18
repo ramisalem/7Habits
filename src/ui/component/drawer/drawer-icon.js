@@ -32,7 +32,9 @@ export const MCIcons = {
     creditCardPlus: MCIconCreater('credit-card-plus'),
     accountMultiple: MCIconCreater('account-multiple'),
     lightbulbOnOutline: MCIconCreater('lightbulb-on-outline'),
+    checkboxBlankOutline: MCIconCreater('checkbox-blank-outline'),
     checkboxMarkedOutline: MCIconCreater('checkbox-marked-outline'),
+    checkboxBlankCircleOutline: MCIconCreater('checkbox-blank-circle-outline'),
     checkboxMarkedCircleOutline: MCIconCreater('checkbox-marked-circle-outline'),
 };
 

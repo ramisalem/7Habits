@@ -1,46 +1,42 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import { BodyText } from "../body-text/body-text";
 import { scaledSize } from "../../shared/size";
 
 import { COLOR } from "../../shared/colors";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const iconSize = scaledSize(22);
+const padding = scaledSize(15);
 
-export const MenuButton = (navigation) => (
+export const HeaderButton = (iconName, color, onPress) => (
     <MaterialCommunityIcons
-        name='menu'
+        name={iconName}
         size={iconSize}
-        style={styles.iconLeft}
-        onPress={() => navigation.openDrawer()}
+        style={{paddingHorizontal: padding, color}}
+        onPress={onPress}
     />
 );
 
-export const TintButton = (navigation) => (
-    <MaterialCommunityIcons
-        name='lightbulb-on-outline'
-        size={iconSize}
-        style={styles.iconRight}
-        onPress={() => navigation.openDrawer()}
-    />
-);
+export const CloseButton = (navigation) =>
+    HeaderButton('close', COLOR.WHITE, () => navigation.goBack(null));
 
-export const CloseButton = (navigation) => (
-    <MaterialCommunityIcons
-        name='close'
-        size={iconSize}
-        style={styles.iconLeft}
-        onPress={() => navigation.goBack(null)}
-    />
+export const TintButton = (navigation) =>
+    HeaderButton('lightbulb-on-outline', COLOR.BANANA, () => navigation.openDrawer());
+
+export const MenuButton = (navigation) =>
+    HeaderButton('menu', COLOR.GRAPHITE, () => navigation.openDrawer());
+
+export const SaveButton = (onPress) => (
+    <TouchableOpacity onPress={onPress}>
+        <BodyText style={styles.textButton}>SAVE</BodyText>
+    </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
-    iconLeft: {
-        paddingLeft: 15,
-        color: COLOR.GRAPHITE,
-    },
-    iconRight: {
-        paddingRight: 15,
-        color: COLOR.BANANA,
+    textButton: {
+        fontSize: scaledSize(16),
+        color: COLOR.WHITE,
+        paddingHorizontal: padding,
     },
 });

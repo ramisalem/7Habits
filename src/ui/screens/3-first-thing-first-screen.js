@@ -7,8 +7,8 @@ import {
 import { TodoListCard } from "../component/todo-list-card/todo-list-card.component";
 
 import { COLOR } from "../shared/colors";
-
-import { cardType } from "../component/todo-list-card/todo-list-card.component";
+import { TODO_GROUP_NAME } from "../../shared/constant";
+import { scaledSize } from "../shared/size";
 
 export class FirstThingFirstScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
@@ -20,18 +20,18 @@ export class FirstThingFirstScreen extends Component {
             <View style={styles.container}>
                 <View style={styles.horizonPart}>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={cardType.important}/>
+                        <TodoListCard type={TODO_GROUP_NAME.IMPORTANT}/>
                     </View>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={cardType.importantUrgent}/>
+                        <TodoListCard type={TODO_GROUP_NAME.IMPORTANT_URGENT}/>
                     </View>
                 </View>
                 <View style={styles.horizonPart}>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={cardType.notUrgent}/>
+                        <TodoListCard type={TODO_GROUP_NAME.NOT_URGENT}/>
                     </View>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={cardType.urgent}/>
+                        <TodoListCard type={TODO_GROUP_NAME.URGENT}/>
                     </View>
                 </View>
             </View>
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: COLOR.GROUP,
-        margin: 10,
-        marginBottom: 20,
+        margin: scaledSize(8),
+        marginBottom: scaledSize(20),
         paddingVertical: 2,
     },
     horizonPart: {
@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
     },
     verticalPart: {
         flex:1,
-        margin: 10,
+        margin: scaledSize(8),
     },
 });
