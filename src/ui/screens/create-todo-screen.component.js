@@ -5,7 +5,7 @@ import {
     View,
     StyleSheet,
 } from "react-native";
-import { CloseButton } from "../ui/component/menu-button/menu-button";
+import { CloseButton } from "../component/menu-button/menu-button";
 
 export class CreateTodoScreen extends Component {
     static navigationOptions = ({ navigation }) => ({

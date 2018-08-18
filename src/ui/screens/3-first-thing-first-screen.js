@@ -4,9 +4,11 @@ import {
     StyleSheet,
     Button
 } from "react-native";
-import { TodoListCard } from "../ui/todo-list-card/todo-list-card.component";
+import { TodoListCard } from "../component/todo-list-card/todo-list-card.component";
 
-import { COLOR } from "../ui/shared/colors";
+import { COLOR } from "../shared/colors";
+
+import { cardType } from "../component/todo-list-card/todo-list-card.component";
 
 export class FirstThingFirstScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
@@ -18,13 +20,19 @@ export class FirstThingFirstScreen extends Component {
             <View style={styles.container}>
                 <View style={styles.horizonPart}>
                     <View style={styles.verticalPart}>
-                        <TodoListCard navigation={this.props.navigation}/>
+                        <TodoListCard type={cardType.important}/>
                     </View>
-                    <View style={styles.verticalPart}/>
+                    <View style={styles.verticalPart}>
+                        <TodoListCard type={cardType.importantUrgent}/>
+                    </View>
                 </View>
                 <View style={styles.horizonPart}>
-                    <View style={styles.verticalPart}/>
-                    <View style={styles.verticalPart}/>
+                    <View style={styles.verticalPart}>
+                        <TodoListCard type={cardType.notUrgent}/>
+                    </View>
+                    <View style={styles.verticalPart}>
+                        <TodoListCard type={cardType.urgent}/>
+                    </View>
                 </View>
             </View>
         );
@@ -37,7 +45,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: COLOR.GROUP,
-        margin: 5,
+        margin: 10,
+        marginBottom: 20,
         paddingVertical: 2,
     },
     horizonPart: {
@@ -47,7 +56,6 @@ const styles = StyleSheet.create({
     },
     verticalPart: {
         flex:1,
-        backgroundColor: COLOR.WHITE,
-        margin: 5,
+        margin: 10,
     },
 });

@@ -17,7 +17,7 @@ export const stackNavigatorOptions = {
             fontWeight: '500',
             fontSize: scaledSize(20),
         },
-        headerTintColor: COLOR.BLACK,
+        headerTintColor: COLOR.TEXT,
         headerLeft: MenuButton(navigation),
         headerRight: TintButton(navigation),
     }),

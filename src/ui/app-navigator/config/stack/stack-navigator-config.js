@@ -8,7 +8,7 @@ import {
     SynergizeScreen,
     SharpenTheSawScreen,
     CreateTodoScreen,
-} from "../../../../screens";
+} from "../../../screens";
 import {
     routeNames,
     screenRouteName,

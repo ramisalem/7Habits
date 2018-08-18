@@ -8,8 +8,8 @@ import { scaledSize } from "../../shared/size";
 
 export const BodyText = (props) => (
     <Text
-        {...props}
-        style={styles.text}>
+        style={styles.text}
+        {...props}>
         {props.children}
     </Text>
 );
@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     text: {
-        fontSize: scaledSize(18),
         color: COLOR.TEXT,
+        fontSize: scaledSize(18),
+        fontFamily: 'PingFangTC-Regular',
     }
 });
