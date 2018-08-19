@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: 2,
+        paddingBottom: scaledSize(12),
+        paddingHorizontal: scaledSize(8),
         backgroundColor: COLOR.GROUP,
-        margin: scaledSize(8),
-        marginBottom: scaledSize(12),
-        paddingVertical: 2,
     },
     horizonPart: {
         flex:1 ,
