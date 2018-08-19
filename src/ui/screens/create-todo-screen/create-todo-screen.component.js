@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-    Text,
     TextInput,
     View,
     StyleSheet,
@@ -54,7 +53,6 @@ export class CreateTodoScreen extends Component {
         };
         navigation.setParams({ headerColor: todoGroup[group].tintColor });
         navigation.setParams({ saveAction: updateCurrentGroup });
-
     }
 
     render() {
@@ -65,9 +63,7 @@ export class CreateTodoScreen extends Component {
                     style={styles.editor}
                     onChangeText={(text) => this.setState({content: text})}
                     ref={ ref => this.editor = ref}
-                    value={this.state.content}
-                >
-                </TextInput>
+                    value={this.state.content} />
             </View>
         )
     }

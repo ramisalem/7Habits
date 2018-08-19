@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import {
     View,
     StyleSheet,
-    Button
 } from "react-native";
-import { TodoListCard } from "../component/todo-list-card/todo-list-card.component";
+import { TodoListCard } from "../component/todo-list-card/todo-list-card.container.component";
 
 import { COLOR } from "../shared/colors";
 import { TODO_GROUP_NAME } from "../../shared/constant";
@@ -20,18 +19,18 @@ export class FirstThingFirstScreen extends Component {
             <View style={styles.container}>
                 <View style={styles.horizonPart}>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={TODO_GROUP_NAME.IMPORTANT}/>
+                        <TodoListCard group={TODO_GROUP_NAME.IMPORTANT}/>
                     </View>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={TODO_GROUP_NAME.IMPORTANT_URGENT}/>
+                        <TodoListCard group={TODO_GROUP_NAME.IMPORTANT_URGENT}/>
                     </View>
                 </View>
                 <View style={styles.horizonPart}>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={TODO_GROUP_NAME.NOT_URGENT}/>
+                        <TodoListCard group={TODO_GROUP_NAME.NOT_URGENT}/>
                     </View>
                     <View style={styles.verticalPart}>
-                        <TodoListCard type={TODO_GROUP_NAME.URGENT}/>
+                        <TodoListCard group={TODO_GROUP_NAME.URGENT}/>
                     </View>
                 </View>
             </View>
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: COLOR.GROUP,
         margin: scaledSize(8),
-        marginBottom: scaledSize(20),
+        marginBottom: scaledSize(12),
         paddingVertical: 2,
     },
     horizonPart: {

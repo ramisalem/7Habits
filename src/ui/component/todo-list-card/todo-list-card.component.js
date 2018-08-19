@@ -1,5 +1,4 @@
 import React from "react";
-import { withNavigation } from 'react-navigation';
 import {
     View,
     StyleSheet,
@@ -10,32 +9,25 @@ import { BodyText } from "../body-text/body-text";
 import { todoGroup } from "../../../shared/constant";
 import { scaledSize } from "../../shared/size";
 
-const TodoListCardComponent = ({type, navigation}) => (
+export const TodoListCardComponent = ({group, content, navigation}) => (
     <View style={styles.container}>
-        <View style={[styles.cardHeader, {backgroundColor: todoGroup[type].tintColor}]}>
-            <BodyText style={styles.headerText}>{todoGroup[type].title}</BodyText>
+        <View style={[styles.cardHeader, {backgroundColor: todoGroup[group].tintColor}]}>
+            <BodyText style={styles.headerText}>{todoGroup[group].title}</BodyText>
         </View>
         <View style={styles.cardBody}>
             <TouchableWithoutFeedback
                 onPress={ () => {
-                    navigation.navigate('createTodoScreen', {
-                        todoGroup: type,
-                    })
+                    navigation.navigate('createTodoScreen', { todoGroup: group })
                 }}>
                 <View style={styles.container}>
                     <View style={styles.todoItem}>
-                        <BodyText>- Movie</BodyText>
-                    </View>
-                    <View style={styles.todoItem}>
-                        <BodyText>- Read</BodyText>
+                        <BodyText>{content}</BodyText>
                     </View>
                 </View>
             </TouchableWithoutFeedback>
         </View>
     </View>
 );
-
-export const TodoListCard = withNavigation(TodoListCardComponent);
 
 const styles = StyleSheet.create({
     container: {

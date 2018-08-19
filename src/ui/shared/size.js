@@ -25,5 +25,3 @@ export const size = {
     oneThird: scaledSize(125),
     fullScreen: scaledSize(375),
 };
-
-console.log(size);
