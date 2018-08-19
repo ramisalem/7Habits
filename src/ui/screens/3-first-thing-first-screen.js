@@ -11,7 +11,7 @@ import { scaledSize } from "../shared/size";
 
 export class FirstThingFirstScreen extends Component {
     static navigationOptions = ({ navigation }) => ({
-        title: "First Thing First",
+        title: "要事第一",
     });
 
     render() {
