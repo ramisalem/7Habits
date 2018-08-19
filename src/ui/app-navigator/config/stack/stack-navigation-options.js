@@ -15,7 +15,7 @@ export const stackNavigatorOptions = {
         },
         headerTitleStyle: {
             fontWeight: '500',
-            fontSize: scaledSize(20),
+            fontSize: scaledSize(18),
         },
         headerTintColor: COLOR.TEXT,
         headerLeft: MenuButton(navigation),

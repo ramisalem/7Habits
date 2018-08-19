@@ -7,7 +7,7 @@ import {
     SeekToUnderstandScreen,
     SynergizeScreen,
     SharpenTheSawScreen,
-    CreateTodoScreen,
+    CreateTodoScreenContainer,
 } from "../../../screens";
 import {
     routeNames,
@@ -32,7 +32,7 @@ const beginWithEndStackRoutes =
     screenRoute(routeNames.beginWithEnd, BeginWithEndScreen);
 const firstThingFirstStackRoutes = {
     ...screenRoute(routeNames.firstThingFirst, FirstThingFirstScreen),
-    ...screenRoute(routeNames.createTodo, CreateTodoScreen),
+    ...screenRoute(routeNames.createTodo, CreateTodoScreenContainer),
 };
 const thinkWinWinStackRoutes =
     screenRoute(routeNames.thinkWinWin, ThinkWinWinScreen);

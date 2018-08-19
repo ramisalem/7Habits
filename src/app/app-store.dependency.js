@@ -29,7 +29,6 @@ export function configureStore() {
     ];
     const middlewareEnhancer = applyMiddleware(...middlewares);
     const enhancers = composeWithDevTools(middlewareEnhancer);
-    console.log(appReducers)
     const reducer = persistCombineReducers(config, appReducers);
 
     const store = createStore(reducer, enhancers);

@@ -35,7 +35,7 @@ export const SaveButton = (onPress) => (
 
 const styles = StyleSheet.create({
     textButton: {
-        fontSize: scaledSize(16),
+        fontSize: scaledSize(14),
         color: COLOR.WHITE,
         paddingHorizontal: padding,
     },
