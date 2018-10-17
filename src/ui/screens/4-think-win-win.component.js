@@ -14,7 +14,7 @@ export class ThinkWinWinScreen extends Component {
         return (
             <View style={styles.container}>
                 <Button
-                    onPress={() => this.props.navigation.navigate('CreateTodoScreen')}
+                    onPress={() => this.props.navigation.navigate('beProactiveScreen')}
                     title="Go to home tab"
                 />
             </View>
