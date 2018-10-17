@@ -7,8 +7,8 @@ Implemented a material style drawer with `react-navigation`.
 
 #### Drawer
 
-![](./img/drawer.png)
+![](./img/drawer-screenshot.png)
 
 #### Main
 
-![](./img/main.png)
+![](./img/main-screenshot.png)
